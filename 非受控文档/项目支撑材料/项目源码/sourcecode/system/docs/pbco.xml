@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited by PBCLS Group(ZJU) -->
+<pbco xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	  xsi:schemaLocation="http://www.pbcls.org/pbco/ pbco.xsd"
+  	  xmlns="http://www.pbcls.org/pbco/">
+	<name>Teaching Assistance System For Courses Of Software Engineering</name>
+	<version>1.0</version>
+	<description>"Teaching Assistance System  for Software Engineering"  is special  for a 
+teacher,  a  curriculum.  It  can  effectively  provide  many  cross-curriculum 
+resources  sharing  and  controlling.  Its main  users  are  teachers who  instruct 
+project  management,  requirements  engineering  and  related  courses  and  
+students who select  the course, as well as  friends  that are  interested. As a 
+result,  the  single  management  for  users  is  easy.  Its  function  is  to  serve 
+teachers and students convenience in education and learning process.  It also 
+keeps a record of the course  from the beginning, which may be not available 
+for all websites. </description>
+	<author>PBCLS Group</author>
+	<email>pbcls@cs.zju.edu.cn</email>
+	<creationdate>2009-09-22</creationdate>
+	<lastmodified>2009-09-22</lastmodified>
+	<resources>
+		<resource>
+			<id>1</id>
+			<role>PROJECT_MANAGER</role>
+			<name>PM</name>
+		</resource>
+		<resource>
+			<id>2</id>
+			<role>SOFTWARE_DEVELOPER</role>
+			<name>SD 1</name>
+		</resource>
+		<resource>
+			<id>3</id>
+			<role>SOFTWARE_DEVELOPER</role>
+			<name>SD 2</name>
+		</resource>
+		<resource>
+			<id>4</id>
+			<role>SOFTWARE_DEVELOPER</role>
+			<name>SD 3</name>
+		</resource>	
+		<resource>
+			<id>5</id>
+			<role>SOFTWARE_DEVELOPER</role>
+			<name>SD 4</name>
+		</resource>	
+		<resource>
+			<id>6</id>
+			<role>SOFTWARE_DEVELOPER</role>
+			<name>SD 5</name>
+		</resource>	
+	</resources>
+	<tasks>
+		<task>
+			<id>1</id>
+			<name>Initializating</name>		
+			<isparent>1</isparent>
+			<ismilestone>0</ismilestone>
+			<duration>19</duration>					
+		</task>	
+		<task>
+			<id>2</id>
+			<name>Select project manager</name>
+			<isparent>0</isparent>
+			<ismilestone>0</ismilestone>
+			<duration>0</duration>
+			<parentid>1</parentid>
+			<resourceids>ALL</resourceids>
+		</task>
+		<task>
+			<id>3</id>
+			<name>Form project team</name>
+			<isparent>0</isparent>
+			<ismilestone>0</ismilestone>
+			<duration>0</duration>
+			<parentid>1</parentid>
+			<resourceids>ALL</resourceids>
+		</task>
+		<task>
+			<id>4</id>
+			<name>Analyse project feasibility</name>
+			<isparent>0</isparent>
+			<ismilestone>0</ismilestone>
+			<duration>1</duration>
+			<parentid>1</parentid>
+			<predecessorids>3</predecessorids>
+			<resourceids>1,2,3</resourceids>
+		</task>
+		<task>
+			<id>5</id>
+			<name>Finish Feasibility Analysis Report</name>
+			<isparent>0</isparent>
+			<ismilestone>0</ismilestone>
+			<duration>0</duration>
+			<parentid>1</parentid>
+			<predecessorids>4</predecessorids>
+			<resourceids>1,2,3</resourceids>
+			<outputs>docs/Feasibility Analysis Report.doc</outputs>
+		</task>
+		<task>
+			<id>6</id>
+			<name>Develop project charter</name>
+			<isparent>0</isparent>
+			<ismilestone>0</ismilestone>
+			<duration>0</duration>
+			<parentid>1</parentid>
+			<predecessorids>4</predecessorids>
+			<resourceids>1,2,3</resourceids>
+		</task>
+		<task>
+			<id>7</id>
+			<name>Finish Project Charter</name>
+			<isparent>0</isparent>
+			<ismilestone>1</ismilestone>
+			<duration>0</duration>
+			<parentid>1</parentid>
+			<predecessorids>6</predecessorids>
+			<resourceids>1,2,3</resourceids>
+			<outputs>docs/Project Charter.doc</outputs>
+		</task>
+		<task>
+			<id>8</id>
+			<name>Planning</name>
+			<isparent>1</isparent>
+			<ismilestone>0</ismilestone>
+			<duration>25</duration>
+		</task>
+		<task>
+			<id>9</id>
+			<name>Develop scope statement</name>
+			<isparent>0</isparent>
+			<ismilestone>0</ismilestone>
+			<duration>2</duration>
+			<parentid>8</parentid>
+			<predecessorids></predecessorids>
+			<resourceids>2,3</resourceids>
+		</task>
+		<task>
+			<id>10</id>
+			<name>Create WBS</name>
+			<isparent>0</isparent>
+			<ismilestone>0</ismilestone>
+			<duration>2</duration>
+			<parentid>8</parentid>
+			<predecessorids>9</predecessorids>
+			<resourceids>2,3</resourceids>
+		</task>
+		<task>
+			<id>11</id>
+			<name>Initialize the requirement plan</name>
+			<isparent>0</isparent>
+			<ismilestone>0</ismilestone>
+			<duration>3</duration>
+			<parentid>8</parentid>
+			<predecessorids>9</predecessorids>
+			<resourceids>1,2,3</resourceids>
+		</task>
+		<task>
+			<id>12</id>
+			<name>Refine requirement plan</name>
+			<isparent>0</isparent>
+			<ismilestone>0</ismilestone>
+			<duration>10</duration>
+			<parentid>8</parentid>
+			<predecessorids>11</predecessorids>
+			<resourceids>2,3</resourceids>
+		</task>
+		<task>
+			<id>13</id>
+			<name>Evaluate the requirement plan</name>
+			<isparent>0</isparent>
+			<ismilestone>0</ismilestone>
+			<duration>3</duration>
+			<parentid>8</parentid>
+			<predecessorids>12</predecessorids>
+			<resourceids>1,2,3</resourceids>
+		</task>
+		<task>
+			<id>14</id>
+			<name>Finish Requirement Engineering Plan</name>
+			<isparent>0</isparent>
+			<ismilestone>0</ismilestone>
+			<duration>0</duration>
+			<parentid>8</parentid>
+			<predecessorids>13</predecessorids>
+			<outputs>/docs/Requirement Engineering Plan.doc</outputs>
+		</task>
+		
+	</tasks>
+</pbco>

@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+a:link{text-decoration:none; color:#000000}
+a:visited{text-decoration:none; color:#000000}
+a:hover {text-decoration:none;color: #33CCFF}
+.bbs
+{
+	width:690px;
+	font-size:14px;
+}
+.bbs table{
+	border:solid #999;
+}
+
+.bbs table td,.bbs table th
+{
+	padding-left:15px;
+	padding-right:15px;
+	height:35px;
+}
+
+.bbs .title{
+	background:#CCCCCC;
+}
+
+
+.bbs .content td
+{
+	border-top:solid #999;
+	border-top-width:5px;
+}

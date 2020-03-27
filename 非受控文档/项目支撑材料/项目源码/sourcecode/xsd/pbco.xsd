@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- version 1.01 Edit by 2009-09-22 -->
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:pbl="http://www.pbcls.org/pbco/"
+	targetNamespace="http://www.pbcls.org/pbco/">
+	
+	<!-- Element Definitions -->
+
+	<element name="description" type="string"></element>
+
+	<element name="version" type="string"></element>
+
+	<element name="author" type="string"></element>
+
+	<element name="email" type="string"></element>
+
+	<element name="creationdate" type="date"></element>
+
+	<element name="lastmodified" type="date"></element>
+
+	<element name="id" type="string"></element>
+	
+	<element name="name" type="string"></element>
+
+	<element name="role" type="string"></element>
+
+	<element name="resource" type="pbl:resourceType"></element>
+
+	<element name="resources" type="pbl:resourcesType"></element>
+
+	<element name="duration" type="unsignedInt"></element>
+	
+	<element name="isparent" type="boolean"></element>
+	
+	<element name="ismilestone" type="boolean"></element>
+
+	<element name="parentid" type="string"></element>
+
+	<element name="resourceids" type="string"></element>
+
+	<element name="inputs" type="string"></element>
+
+	<element name="outputs" type="string"></element>
+
+	<element name="predecessorids" type="string"></element>
+
+	<element name="task" type="pbl:taskType"></element>
+
+	<element name="tasks" type="pbl:tasksType"></element>
+
+	<element name="pbco" type="pbl:pbcoType"></element>
+
+	<!-- ComplexType Definitions -->
+
+	<complexType name="resourceType">
+		<sequence>
+			<element ref="pbl:id"></element>
+			<element ref="pbl:role"></element>
+			<element ref="pbl:name"></element>
+		</sequence>
+	</complexType>
+	
+
+	<complexType name="resourcesType">
+		<sequence>
+			<element ref="pbl:resource" maxOccurs="unbounded" minOccurs="1"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="taskType">
+		<sequence>
+			<element ref="pbl:id"></element>
+			<element ref="pbl:name"></element>
+			<element ref="pbl:description" minOccurs="0"></element>
+			<element ref="pbl:isparent"></element>
+			<element ref="pbl:ismilestone"></element>
+			<element ref="pbl:duration" minOccurs="0"></element>
+			<element ref="pbl:parentid" minOccurs="0"></element>
+			<element ref="pbl:predecessorids" minOccurs="0"></element>
+			<element ref="pbl:resourceids" minOccurs="0"></element>
+			<element ref="pbl:inputs" minOccurs="0"></element>
+			<element ref="pbl:outputs" minOccurs="0"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="tasksType">
+		<sequence>
+			<element ref="pbl:task" maxOccurs="unbounded" minOccurs="1"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="pbcoType">
+		<sequence>
+			<element ref="pbl:name"></element>
+			<element ref="pbl:version"></element>
+			<element ref="pbl:description"></element>
+			<element ref="pbl:author"></element>
+			<element ref="pbl:email"></element>
+			<element ref="pbl:creationdate"></element>
+			<element ref="pbl:lastmodified"></element>
+			<element ref="pbl:resources"></element>
+			<element ref="pbl:tasks"></element>
+		</sequence>
+	</complexType>
+</schema>

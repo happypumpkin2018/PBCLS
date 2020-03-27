@@ -1,0 +1,6 @@
+1.add admin
+username: admin
+password: admin
+email: admin@163.com
+
+$user = 
